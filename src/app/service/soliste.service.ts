@@ -25,7 +25,7 @@ export class SolisteService {
     return this.http.get<Soliste[]>("http://localhost:8080/listeSoliste");
   }
 
-  getSolisteByIsbn(id:number):Observable<Soliste>
+  getSolisteById(id:number):Observable<Soliste>
   {
     return this.http.get<Soliste>("http://localhost:8080/getSoliste/" + id);
   }

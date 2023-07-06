@@ -1,1 +1,25 @@
-<p>soliste works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Numero</th>
+        <th scope="col">nom</th>
+        <th scope="col">prenom</th>
+        <th scope="col">Date de Naissance</th>
+        <th scope="col">Nationalite</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let soliste of listeSoliste | async">
+        <th scope="row">{{soliste.num}}</th>
+        <td>{{soliste.nom}}</td>
+        <td>{{soliste.prenom}}</td>
+        <td>{{soliste.dateNaissance}}</td>
+        <td>{{soliste.nationalite}}</td>
+        <td>
+          <button type="button" class="btn btn-primary" (click)="getSolisteById(soliste.num)">Modifier</button>
+          <button type="button" class="btn btn-danger" (click)="supprimer(soliste.num)">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
