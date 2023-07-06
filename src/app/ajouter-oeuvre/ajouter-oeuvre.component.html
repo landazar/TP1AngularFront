@@ -1,0 +1,16 @@
+<form [formGroup]="oeuvreForm">
+    <div class="mb-3">
+      <label for="idOeuvre" class="form-label">Id</label>
+      <input type="text" class="form-control" formControlName="idOeuvre">
+    </div>
+    <div class="mb-3">
+      <label for="nomOeuvre" class="form-label">Nom</label>
+      <input type="text" class="form-control" formControlName="nomOeuvre">
+    </div>
+    <div class="mb-3">
+        <label for="dureeOeuvre" class="form-label">Duree</label>
+        <input type="text" class="form-control" formControlName="dureeOeuvre">
+      </div>
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+  </form>
+
