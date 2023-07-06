@@ -1,1 +1,29 @@
-<p>chef-orchestre works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Date de naissance</th>
+        <th scope="col">Nationalite</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Commentaires</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let co of listeChefOrchestre | async">
+        <th scope="row">{{co.id}}</th>
+        <td>{{co.nom}}</td>
+        <td>{{co.prenom}}</td>
+        <td>{{co.dateNaissance}}</td>
+        <td>{{co.nationalite}}</td>
+        <td>{{co.prix}}</td>
+        <td>{{co.commentaires}}</td>
+        <td>
+          <button type="button" class="btn btn-primary">Modifier</button>
+          <button type="button" class="btn btn-danger">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
