@@ -1,0 +1,24 @@
+<div *ngIf="solisteForm">
+    <form [formGroup]="solisteForm">
+      <div class="mb-3">
+  
+        <input type="hidden" class="form-control" formControlName="num">
+  
+        <label for="titre" class="form-label">Nom</label>
+        <input type="text" class="form-control" formControlName="nom">
+      </div>
+      <div class="mb-3">
+        <label for="auteur" class="form-label">Prenom</label>
+        <input type="text" class="form-control" formControlName="prenom">
+      </div>
+      <div class="mb-3">
+          <label for="datePublication" class="form-label">Date de Naissance</label>
+          <input type="date" class="form-control" formControlName="dateNaissance">
+        </div>
+        <div class="mb-3">
+            <label for="auteur" class="form-label">Nationalite</label>
+            <input type="text" class="form-control" formControlName="nationalite">
+        </div>
+      <button type="submit" class="btn btn-primary" (click)="updateSoliste()">Enregistrer</button>
+    </form>
+  </div>

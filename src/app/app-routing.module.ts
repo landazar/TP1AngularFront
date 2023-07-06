@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChefOrchestreComponent } from './chefOrchestre/chef-orchestre/chef-orchestre.component';
+import { AjouterOeuvreComponent } from './ajouter-oeuvre/ajouter-oeuvre.component';
 
 const routes: Routes = [
-  {path:"listeChefOrchestre",component:ChefOrchestreComponent}
+  {path:"ajoutOeuvre", component:AjouterOeuvreComponent},
 ];
 
 @NgModule({
